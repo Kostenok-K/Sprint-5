@@ -6,9 +6,6 @@ import pytest
 def driver():
     driver = webdriver.Chrome()
     driver.maximize_window()
-
     yield driver
-
     driver.quit()
-
     return driver

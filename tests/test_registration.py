@@ -1,5 +1,5 @@
 from data import UserData
-from url_s import REGISTRATION_URL
+from url_s import REGISTRATION_URL, LOGIN_PAGE_URL
 from locators import LocatorsReg, LocatorsLoginPage
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
@@ -15,7 +15,7 @@ class TestRegistration:
         WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(LocatorsLoginPage.ENTER_TITLE))
 
-        assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
+        assert driver.current_url == LOGIN_PAGE_URL
 
     def test_registration_password_error(self, driver):
         driver.get(REGISTRATION_URL)

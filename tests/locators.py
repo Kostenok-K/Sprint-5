@@ -2,11 +2,11 @@ from selenium.webdriver.common.by import By
 
 
 class LocatorsReg:
-    NAME_FIELD = (By.XPATH, "(//form//input)[1]")
+    NAME_FIELD = (By.XPATH, "//form//label[text() = 'Имя']/../input")
     # Страница регистрации, форма регистрации поле ввода Имя
-    EMAIL_FIELD = (By.XPATH, "(//form//input)[2]")
+    EMAIL_FIELD = (By.XPATH, "//form//label[text() = 'Email']/../input")
     # Страница регистрации, форма регистрации поле ввода E-mail
-    PASSWORD_FIELD = (By.XPATH, "(//form//input)[3]")
+    PASSWORD_FIELD = (By.XPATH, "//form//input[@type='password']")
     # Страница регистрации, форма регистрации поле ввода Password
     REG_BUTTON = (By.XPATH, "//form//button")
     # Страница регистрации, форма регистрации кнопка Зарегистрироваться
@@ -23,11 +23,11 @@ class LocatorsMainPage:
     # Главная кнока Оформить заказ
     CONSTRUCTOR_TITLE = (By.XPATH, "//h1")
     # Главная заголовок Соберите бургер
-    BREAD_TAB = (By.XPATH, "(//section[contains(@class, 'BurgerIngredients')]//div[contains(@class, 'noselect')])[1]")
+    BREAD_TAB = (By.XPATH, "//section[contains(@class, 'BurgerIngredients')]//span[text() = 'Булки']/..")
     # Главная, таб Булки
-    SAUCES_TAB = (By.XPATH, "(//section[contains(@class, 'BurgerIngredients')]//div[contains(@class, 'noselect')])[2]")
+    SAUCES_TAB = (By.XPATH, "//section[contains(@class, 'BurgerIngredients')]//span[text() = 'Соусы']/..")
     # Главная, таб Соусы
-    TOPPING_TAB = (By.XPATH, "(//section[contains(@class, 'BurgerIngredients')]//div[contains(@class, 'noselect')])[3]")
+    TOPPING_TAB = (By.XPATH, "//section[contains(@class, 'BurgerIngredients')]//span[text() = 'Начинки']/..")
     # Главная, таб Начинки
 
 
